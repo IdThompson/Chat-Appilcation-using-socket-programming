@@ -1,4 +1,6 @@
-package org.example;
+package org.example.service.Implementation;
+
+import org.example.service.ClientHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -33,11 +35,5 @@ public class Server {
         }catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) throws IOException {
-        ServerSocket serverSocket = new ServerSocket(1234);
-        Server server = new Server(serverSocket);
-        server.startServer();
     }
 }
